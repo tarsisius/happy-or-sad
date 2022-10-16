@@ -9,7 +9,12 @@ type Props = {
 const Child: FC<Props> = (props) => {
   return (
     <div className='child'>
-      <Image src={`/${props.value.toLowerCase()}.svg`} width={150} height={200} />
+      <Image
+        src={`/${props.value.toLowerCase()}.svg`}
+        width={150}
+        height={200}
+        alt={props.value.toLowerCase()}
+      />
       <span className='bottom'>
         <button type='button' value={props.value} onClick={props.onClick}>
           {props.children}
