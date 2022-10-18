@@ -21,7 +21,7 @@ const Result = (
 }
 
 export const getServerSideProps = async () => {
-  const req = await fetch('http://localhost:3000/api/count')
+  const req = await fetch(`${process.env.APP_URL}/api/count`)
   const res = await req.json()
   if (!req.ok) {
     return {
