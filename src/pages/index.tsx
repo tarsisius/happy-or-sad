@@ -6,10 +6,10 @@ import type {
 } from 'next'
 
 import Head from 'next/head'
+import Link from 'next/link'
 import { useState } from 'react'
 import { parse } from 'cookie'
 
-import Child from '~components/child'
 import Condition from '~components/condition'
 
 const Home: NextPage<InferGetServerSidePropsType<typeof getServerSideProps>> = (
@@ -42,7 +42,14 @@ const Home: NextPage<InferGetServerSidePropsType<typeof getServerSideProps>> = (
       </Head>
       <div className='front'>
         <div className='vote'>
-          <Condition cookie={cookie} choice={choice} handleClick={handleClick}/>
+          <Condition
+            cookie={cookie}
+            choice={choice}
+            handleClick={handleClick}
+          />
+        </div>
+        <div className='link'>
+          <Link href='/result'>see what people have voted</Link>
         </div>
       </div>
     </>

@@ -126,3 +126,34 @@ select:focus {
   align-items: center;
   padding: 0 20px;
 }
+.result {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+.result span {
+  margin-top: 40px;
+}
+.result span p {
+  color: #fff;
+}
+.result span p .green {
+  color: rgb(34 197 94 / 1);
+}
+.result span p .red {
+  color: rgb(239 68 68 / 1);
+}
+.pie {
+  max-width: 300px;
+}
+.link {
+  margin-top: 40px;
+}
+.link a {
+  color: rgb(234 179 8 /1);
+  text-decoration: none;
+}
