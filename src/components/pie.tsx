@@ -1,9 +1,10 @@
 import type { FC } from 'react'
-import { useState } from 'react'
 import { PieChart } from 'react-minimal-pie-chart'
+
 type Props = {
   data: { happy: number; sad: number }
 }
+
 const Pie: FC<Props> = (props) => {
   return (
     <div className='pie'>

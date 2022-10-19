@@ -16,6 +16,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       voteFor: 'SAD',
     },
   })
+  if (!happy) {
+    res.status(206).json({ happy: 0, sad })
+    return
+  }
+  if (!sad) {
+    res.status(206).json({ happy, sad: 0 })
+    return
+  }
   res.status(200).json({ happy, sad })
   return
 }
