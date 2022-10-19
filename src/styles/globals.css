@@ -148,6 +148,7 @@ select:focus {
   color: rgb(239 68 68 / 1);
 }
 .pie {
+  margin-top: 40px;
   max-width: 300px;
 }
 .link {
